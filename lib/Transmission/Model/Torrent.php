@@ -108,8 +108,14 @@ class Torrent extends AbstractModel
      */
     protected $uploadedEver;
 
+    /**
+     * @var integer
+     */
     protected $activityDate;
 
+    /**
+     * @var integer
+     */
     protected $totalSize;
 
     /**
