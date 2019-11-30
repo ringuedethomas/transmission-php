@@ -110,6 +110,8 @@ class Torrent extends AbstractModel
 
     protected $activityDate;
 
+    protected $totalSize;
+
     /**
      * @param integer $id
      */
@@ -474,6 +476,16 @@ class Torrent extends AbstractModel
         $this->activityDate = $activityDate;
     }
 
+    public function getTotalSize()
+    {
+        return $this->totalSize;
+    }
+
+    public function setTotalSize($totalSize)
+    {
+        $this->totalSize = $totalSize;
+    }
+
     /**
      * {@inheritDoc}
      */
@@ -501,6 +513,7 @@ class Torrent extends AbstractModel
             'downloadedEver' => 'downloadedEver',
             'uploadedEver' => 'uploadedEver',
             'activityDate' => 'activityDate',
+            'totalSize' => 'totalSize',
         );
     }
 }
