@@ -118,6 +118,9 @@ class Torrent extends AbstractModel
      */
     protected $totalSize;
 
+    /** @var string */
+    protected $magnetLink;
+
     /**
      * @param integer $id
      */
@@ -492,6 +495,16 @@ class Torrent extends AbstractModel
         $this->totalSize = $totalSize;
     }
 
+    public function getMagnetLink()
+    {
+        return $this->magnetLink;
+    }
+
+    public function setMagnetLink($magnetLink)
+    {
+        $this->magnetLink = $magnetLink;
+    }
+
     /**
      * {@inheritDoc}
      */
@@ -520,6 +533,7 @@ class Torrent extends AbstractModel
             'uploadedEver' => 'uploadedEver',
             'activityDate' => 'activityDate',
             'totalSize' => 'totalSize',
+            'magnetLink' => 'magnetLink',
         );
     }
 }
